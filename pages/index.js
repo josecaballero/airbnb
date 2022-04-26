@@ -3,6 +3,7 @@ import Banner from './components/Banner'
 import Header from './components/Header'
 import SmallCard from './components/SmallCard'
 import MediumCard from './components/MediumCard'
+import LargeCard from './components/LargeCard'
 
 export default function Home({ exploreData, cardsData }) {
   return (
@@ -12,11 +13,16 @@ export default function Home({ exploreData, cardsData }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
-      <Banner />
+      <section className="md:mb-12">
+        <Header />
+      </section>
+
+      <section className="mb-10 md:mb-28">
+        <Banner />
+      </section>
 
       <main className="mx-auto max-w-7xl px-8 sm:px-16">
-        <section className="mb-10">
+        <section className="mb-10 md:mb-28">
           <h2 className="mb-5 text-2xl font-semibold md:text-3xl">
             Explore Nearby
           </h2>
@@ -48,7 +54,7 @@ export default function Home({ exploreData, cardsData }) {
           </div>
         </section>
 
-        <section className="mb-10">
+        <section className="mb-10 md:mb-28">
           <h2 className="mb-5 text-2xl font-semibold md:text-3xl">
             Live Anywhere
           </h2>
@@ -58,6 +64,15 @@ export default function Home({ exploreData, cardsData }) {
               <MediumCard key={img} img={img} title={title} />
             ))}
           </div>
+        </section>
+
+        <section className="mb-10 md:mb-28">
+          <LargeCard
+            img="https://links.papareact.com/4cj"
+            title="The Greatest Outdoors"
+            description="Wishlists curated by Airbnb."
+            buttonText="Get Inspired"
+          />
         </section>
       </main>
     </div>

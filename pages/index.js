@@ -18,12 +18,12 @@ export default function Home({ exploreData, cardsData }) {
         <Header />
       </section>
 
-      <section className="pb-4 md:py-16">
+      <section className="pb-4 md:py-12">
         <Banner />
       </section>
 
       <main className="mx-auto max-w-7xl px-8 sm:px-16">
-        <section className="py-4 md:py-16">
+        <section className="py-4 md:py-12">
           <h2 className="mb-5 text-2xl font-semibold md:text-3xl">
             Explore Nearby
           </h2>
@@ -55,7 +55,7 @@ export default function Home({ exploreData, cardsData }) {
           </div>
         </section>
 
-        <section className="py-4 md:py-16">
+        <section className="py-4 md:py-12">
           <h2 className="mb-5 text-2xl font-semibold md:text-3xl">
             Live Anywhere
           </h2>
@@ -67,7 +67,7 @@ export default function Home({ exploreData, cardsData }) {
           </div>
         </section>
 
-        <section className="py-4 md:py-16">
+        <section className="pt-4 pb-8 md:py-12">
           <LargeCard
             img="https://links.papareact.com/4cj"
             title="The Greatest Outdoors"
@@ -77,7 +77,7 @@ export default function Home({ exploreData, cardsData }) {
         </section>
       </main>
 
-      <section className="bg-gray-100 py-4 md:py-16">
+      <section className="bg-gray-100 py-12">
         <Footer />
       </section>
     </div>

@@ -1,8 +1,10 @@
-import Head from 'next/head';
-import Banner from './components/Banner';
-import Header from "./components/Header";
+import Head from 'next/head'
+import Banner from './components/Banner'
+import Header from './components/Header'
+import SmallCard from './components/SmallCard'
+import MediumCard from './components/MediumCard'
 
-export default function Home({exploreData}) {
+export default function Home({ exploreData, cardsData }) {
   return (
     <div>
       <Head>
@@ -13,19 +15,53 @@ export default function Home({exploreData}) {
       <Header />
       <Banner />
 
-      <main className="max-w-7xl mx-auto px-8 sm:px-16">
-        <section className="py-10">
-          <h2 className="text-4xl font-semibold mb-5">Explore Nearby</h2>
+      <main className="mx-auto max-w-7xl px-8 sm:px-16">
+        <section className="mb-10">
+          <h2 className="mb-5 text-2xl font-semibold md:text-3xl">
+            Explore Nearby
+          </h2>
 
-{/* Pinto la información que me responde el API con map */
-        exploreData.map( (item) => (
-          <h1>{item.location}</h1>
-        ) )
-}
+          {/* PRE DESTRUCTURING */}
+          {/*           {
+            exploreData.map((item) => (
+              <SmallCard
+                key={item.img}
+                img={item.img}
+                distance={item.distance}
+                location={item.location}
+              />
+            ))
+          } */}
+
+          {/* POST DESTRUCTURING */}
+
+          <div className="sm:grid-gap grid grid-cols-1 space-y-5 sm:grid-cols-2 sm:gap-x-8 md:grid-cols-3 lg:grid-cols-4">
+            {/* Pinto la información que me responde el API con map */}
+            {exploreData.map(({ img, distance, location }) => (
+              <SmallCard
+                key={img}
+                img={img}
+                distance={distance}
+                location={location}
+              />
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="mb-5 text-2xl font-semibold md:text-3xl">
+            Live Anywhere
+          </h2>
+
+          <div className="flex gap-x-5 overflow-scroll scrollbar-hide">
+            {cardsData.map(({ img, title }) => (
+              <MediumCard key={img} img={img} title={title} />
+            ))}
+          </div>
         </section>
       </main>
     </div>
-  );
+  )
 }
 
 // Pull some data from a server - API endpoints
@@ -40,12 +76,18 @@ export default function Home({exploreData}) {
 */
 
 export async function getStaticProps() {
-  const exploreData = await fetch("https://links.papareact.com/pyp").then( (res) => res.json() )
+  const exploreData = await fetch('https://links.papareact.com/pyp').then(
+    (res) => res.json()
+  )
+
+  const cardsData = await fetch('https://links.papareact.com/zp1').then((res) =>
+    res.json()
+  )
 
   return {
     props: {
-      exploreData
-    }
+      exploreData,
+      cardsData,
+    },
   }
-};
-
+}

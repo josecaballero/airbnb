@@ -1,16 +1,20 @@
-import Image from "next/image";
+import Image from 'next/image'
 
 function Banner() {
   return (
-    <div className="relative h-[300px] sm:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[700px]">
+    <div className="relative mb-10 h-[300px] sm:h-[450px]">
       <Image
-      src="https://links.papareact.com/0fm"
-      layout="fill"
-      objectFit="cover"
+        src="https://links.papareact.com/0fm"
+        layout="fill"
+        objectFit="cover"
       />
       <div className="absolute top-1/2 w-full text-center text-red-600">
-        <p className="text-sm sm:text-lg text-gray-800">Not sure where to go? Perfect.</p>
-        <button className="text-purple-500 bg-white px-10 py-4 shadow-md rounded-full font-bold my-3 hover:shadow-lg active:scale-90 transition">I am flexible</button>
+        <p className="text-sm text-gray-800 sm:text-lg">
+          Not sure where to go? Perfect.
+        </p>
+        <button className="my-3 rounded-full bg-white px-10 py-4 font-bold text-purple-500 shadow-md transition hover:shadow-lg active:scale-90">
+          I am flexible
+        </button>
       </div>
     </div>
   )

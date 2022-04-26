@@ -9,9 +9,9 @@ import {
 
 function Header() {
   return (
-    <header className="sticky top-0 grid grid-cols-3 shadow-md bg-white items-center p-5 md:px-10">
+    <header className="sticky top-0 grid grid-cols-3 shadow-md bg-white items-center p-5 md:px-10 z-50">
       {/* Left (Logo) */}
-      <div className="relative flex items-center h-10 cursor-pointer my-auto z-50">
+      <div className="relative flex items-center h-10 cursor-pointer my-auto">
         <Image
         src="https://links.papareact.com/qd3"
         layout="fill"

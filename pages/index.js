@@ -42,7 +42,7 @@ export default function Home({ exploreData, cardsData }) {
 
           {/* POST DESTRUCTURING */}
 
-          <div className="sm:grid-gap grid grid-cols-1 space-y-5 sm:grid-cols-2 sm:gap-x-8 md:grid-cols-3 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-x-8 md:grid-cols-3 lg:grid-cols-4">
             {/* Pinto la información que me responde el API con map */}
             {exploreData.map(({ img, distance, location }) => (
               <SmallCard

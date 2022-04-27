@@ -24,7 +24,7 @@ export default function Home({ exploreData, cardsData }) {
 
       <main className="mx-auto max-w-7xl px-8 sm:px-16">
         <section className="py-4 md:py-12">
-          <h2 className="mb-5 text-2xl font-semibold md:text-3xl">
+          <h2 className="mb-5 text-2xl font-semibold md:mb-10 md:text-3xl">
             Explore Nearby
           </h2>
 
@@ -56,7 +56,7 @@ export default function Home({ exploreData, cardsData }) {
         </section>
 
         <section className="py-4 md:py-12">
-          <h2 className="mb-5 text-2xl font-semibold md:text-3xl">
+          <h2 className="mb-5 text-2xl font-semibold md:mb-10 md:text-3xl">
             Live Anywhere
           </h2>
 

@@ -51,11 +51,11 @@ function Header({ placeholder }) {
   }
 
   return (
-    <header className="sticky top-0 z-50 grid grid-cols-3 items-center gap-x-4 bg-white p-2 sm:p-4 md:px-10">
+    <header className="sticky top-0 z-50 grid grid-cols-1 items-center gap-x-4 bg-white p-3 sm:p-4 md:grid-cols-3 md:px-10">
       {/* Left (Logo) */}
       <div
         onClick={() => router.push('/')}
-        className="relative my-auto flex h-8 cursor-pointer items-center sm:h-10 "
+        className="relative my-auto hidden h-8 cursor-pointer items-center sm:h-10 md:flex "
       >
         <Image
           src="https://links.papareact.com/qd3"
@@ -66,7 +66,7 @@ function Header({ placeholder }) {
       </div>
 
       {/* Middle (Search Bar) */}
-      <div className="flex rounded-full py-2 md:border-2 md:shadow-sm">
+      <div className="flex cursor-pointer rounded-full border py-2">
         <input
           value={searchInput}
           onChange={showDatePicker}
@@ -74,11 +74,11 @@ function Header({ placeholder }) {
           type="text"
           placeholder={placeholder || 'Start your search'}
         />
-        <SearchIcon className="hidden h-8 cursor-pointer rounded-full bg-red-400 p-2 text-white md:mx-2 md:inline-flex" />
+        <SearchIcon className="mr-2 inline-flex h-8 cursor-pointer rounded-full bg-red-400 p-2 text-white md:mx-2" />
       </div>
 
       {/* Right (Menu) */}
-      <div className="flex items-center justify-end space-x-4 text-gray-500">
+      <div className="hidden items-center justify-end space-x-4 text-gray-500 md:flex">
         <p className="hidden cursor-pointer text-sm md:flex">Become a host</p>
         <GlobeAltIcon className="h-6" />
         <div className="flex space-x-2 rounded-full border-2 p-2">
@@ -88,7 +88,7 @@ function Header({ placeholder }) {
       </div>
 
       {searchInput && (
-        <div className="col-span-3 mx-auto flex flex-col">
+        <div className="col-span-3 mx-auto flex w-full flex-col md:w-auto">
           <DateRangePicker
             ranges={[selectionRange]}
             minDate={new Date()}

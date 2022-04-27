@@ -77,7 +77,7 @@ export default function Home({ exploreData, cardsData }) {
         </section>
       </main>
 
-      <section className="bg-gray-100 py-12">
+      <section className="bg-gray-100">
         <Footer />
       </section>
     </div>

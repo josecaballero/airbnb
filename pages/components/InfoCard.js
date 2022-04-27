@@ -13,7 +13,7 @@ const InfoCard = ({
 }) => {
   return (
     <div className="mb-6 cursor-pointer gap-8 rounded-lg duration-150 sm:flex sm:p-6 sm:transition sm:hover:bg-gray-50">
-      <div className="relative mb-4 h-40 w-full sm:mb-0 sm:h-24 sm:w-40 md:h-52 md:w-80">
+      <div className="relative mb-4 h-56 w-full sm:mb-0 sm:h-24 sm:w-40 md:h-52 md:w-80">
         <Image
           src={img}
           layout="fill"

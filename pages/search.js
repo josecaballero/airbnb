@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { useRouter } from 'next/dist/client/router'
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -16,6 +17,10 @@ const Search = ({ searchResults }) => {
 
   return (
     <div>
+      <Head>
+        <title>Search | Airbnb</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Header placeholder={`${location}, ${range}`} />
       <main className="flex">
         <section className="flex-grow px-6 md:pt-14">

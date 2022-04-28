@@ -73,7 +73,7 @@ function Header({ placeholder }) {
         <input
           value={searchInput}
           onChange={showDatePicker}
-          className="placeholder-grey-400 flex-grow bg-transparent pl-5 text-sm text-gray-600 outline-none"
+          className="placeholder-grey-400 flex-grow bg-transparent pl-4 text-xs text-gray-600 outline-none"
           type="text"
           placeholder={placeholder || 'Start your search'}
         />

@@ -51,7 +51,7 @@ function Header({ placeholder }) {
   }
 
   return (
-    <header className="sticky top-0 z-50 grid grid-cols-1 items-center gap-x-4 bg-white p-3 sm:p-4 md:grid-cols-3 md:px-10">
+    <header className="sticky top-0 z-50 grid grid-cols-1 items-center bg-white p-3 sm:p-4 md:grid-cols-3 md:px-10">
       {/* Left (Logo) */}
       <div
         onClick={() => router.push('/')}
@@ -94,6 +94,7 @@ function Header({ placeholder }) {
             minDate={new Date()}
             rangeColors={['#fd5b61']}
             onChange={handleSelect}
+            className="!block xs:!inline-flex"
           />
           <div className="mb-4 flex items-center border-b">
             <h2 className="flex-grow text-2xl font-semibold">

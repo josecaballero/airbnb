@@ -14,3 +14,15 @@
     width: 100% !important;
   }
 }
+
+.mapboxgl-ctrl-attrib {
+  display: none;
+}
+
+.mapboxgl-popup-content {
+  padding: 15px !important;
+}
+
+.mapboxgl-popup-close-button {
+  right: 5px !important;
+}

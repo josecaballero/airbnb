@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import { format } from 'date-fns'
 import InfoCard from './components/InfoCard'
+import Map from './components/Map'
 
 const Search = ({ searchResults }) => {
   const router = useRouter()
@@ -55,7 +56,11 @@ const Search = ({ searchResults }) => {
             )}
           </div>
         </section>
+        <section className="hidden cursor-pointer xl:sticky xl:top-0 xl:inline-flex xl:h-screen xl:min-w-[600px]">
+          <Map searchResults={searchResults} />
+        </section>
       </main>
+
       <section className="bg-gray-100">
         <Footer />
       </section>

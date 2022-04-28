@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import ReactMapGL, { Marker, Popup } from 'react-map-gl'
 import getCenter from 'geolib/es/getCenter'
-/* import 'mapbox-gl/dist/mapbox-gl.css'
- */
+
 const Map = ({ searchResults }) => {
   const [selectedLocation, setSelectedLocation] = useState({})
   console.log(selectedLocation)

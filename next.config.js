@@ -5,7 +5,7 @@ module.exports = {
     domains: ['links.papareact.com'] /* we need to whitelist domain images */,
   },
   env: {
-    mapbox_key:
+    MAPBOX_KEY:
       'pk.eyJ1Ijoic2liZXJpMCIsImEiOiJjbDJpc3FrYWwwajkzM2lxNmRkNnlpOWYyIn0.OdH1y4vzJdmnK7ZdpQnvYw',
   },
 }

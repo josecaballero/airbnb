@@ -39,15 +39,18 @@ function Header({ placeholder }) {
   }
 
   const search = () => {
-    router.push({
-      pathname: '/search',
-      query: {
-        location: searchInput,
-        startDate: startDate.toISOString(),
-        endDate: endDate.toISOString(),
-        numberOfGuests,
+    router.push(
+      {
+        pathname: '/search',
+        query: {
+          location: searchInput,
+          startDate: startDate.toISOString(),
+          endDate: endDate.toISOString(),
+          numberOfGuests,
+        },
       },
-    })
+      resetInput()
+    )
   }
 
   return (
